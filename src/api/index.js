@@ -20,3 +20,12 @@ export const fetchData = async() => {
       return error;
     }
 }
+
+export const fetchStates = async () => {
+  try{
+    const response = await axios.get('https://gist.githubusercontent.com/mshafrir/2646763/raw/8b0dbb93521f5d6889502305335104218454c2bf/states_titlecase.json');
+    return response.data.map((state) => state.abbreviation.toLowerCase());
+  } catch(error){
+    console.lgo(error);
+  }
+}

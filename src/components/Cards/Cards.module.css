@@ -1,9 +1,10 @@
 .container {
-    display : margin 50px 0;
+    margin : 50px 0;
+    width : 100%;
 }
 
 .card {
-    margin : 0 2% !important;
+    margin : 0 1% !important;
     border-bottom: 10px solid rgba(0, 0, 255, 0.5);
 }
 

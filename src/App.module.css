@@ -7,8 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .container {
-  margin : 2%;
+  /* margin : 2%; */
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import Cards from './components/Cards/Cards';
+import Picker from './components/Picker/Picker';
 import styles from './App.module.css';
 import {fetchData} from './api';
 
@@ -12,7 +13,7 @@ class App extends React.Component {
   }
   async componentDidMount(){
     const fetchedData  = await fetchData();
-    console.log(fetchedData);
+    // console.log(fetchedData);
     this.setState({data : fetchedData})
   }
   render(){
@@ -22,8 +23,9 @@ class App extends React.Component {
       <>
       <div className={styles.container}>
         <h1>Covid 19 US Cases Tracker</h1>
+        <Picker/>
+        <Cards data={data}/>
       </div>
-      <Cards data={data}/>
       </>
     )
   }
