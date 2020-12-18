@@ -5,7 +5,7 @@ import CountUp from 'react-countup'
 
 const Cards = (props) => {
     if (!props.data.positive) {
-        console.log("Failed to load");
+        // console.log("Failed to load");
         return 'Loading...'
     }
     // console.log(props.data.positive);
@@ -29,7 +29,7 @@ const Cards = (props) => {
                             <CountUp start={0} end={props.data.hospitalizedIncrease} duration={2} separator="," />
                         </Typography>
                         <Typography color="textSecondary">{new Date(props.data.dateChecked).toDateString()}</Typography>
-                        <Typography variant="body2">Number of Recovered Cases</Typography>
+                        <Typography variant="body2">Number of Infected Hospitalized</Typography>
                     </CardContent>
                 </Grid>
                 <Grid item xs={12} md={3} component={Card} className={styles.card}>

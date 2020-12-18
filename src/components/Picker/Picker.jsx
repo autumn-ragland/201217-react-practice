@@ -4,7 +4,7 @@ import {NativeSelect, FormControl} from '@material-ui/core'
 import {fetchStates} from '../../api'
 
 
-const Picker = () => {
+const Picker = ( {handleStateChoice} ) => {
     const [stateChoices, setStateChoices] = useState([]);
     useEffect(() => {
         const fetchAPI = async () => {
@@ -18,8 +18,8 @@ const Picker = () => {
     return (
         <div className={styles.container}>
             <FormControl variant="outlined" className={styles.formControl}>
-                <NativeSelect>
-                    <option value = "global">Global</option>
+                <NativeSelect defaultValue = "" onChange = {(e) => handleStateChoice(e.target.value)}>
+                    <option value = "tn">tn</option>
                     {stateChoices.map((state, i) => <option key={i} value={state}>{state}</option>)}
                 </NativeSelect>
             </FormControl>
